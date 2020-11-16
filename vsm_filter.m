@@ -34,7 +34,7 @@ end
 filbar = mean(T(1:max(size(filb))+1,:)); % calculate the mean T over the first days of each year, corresponding to the filter length
 T0 = [repmat(filbar,max(size(filb)),1); T]; % pad the beginning then beginning of the filter (T) matrix
 
-fila = [1];
+fila = 1;
 Tfil = filter(filb,fila,T0);
 Tfil = Tfil(max(size(filb))+1:end,:);
 
